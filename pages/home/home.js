@@ -209,3 +209,68 @@ document.getElementById('contactForm').addEventListener('submit', (e) => {
   btn.textContent = 'Terkirim ✓';
   setTimeout(() => { btn.textContent = 'Kirim Pesan'; e.target.reset(); }, 2500);
 });
+
+// Parallax Hero
+const heroSection = document.querySelector('.home');
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  if (scrollY < window.innerHeight) {
+    heroSection.style.backgroundPositionY = `calc(50% + ${scrollY * 0.4}px)`;
+  }
+});
+
+// Cursor Custom
+const cursor         = document.getElementById('cursor');
+const cursorFollower = document.getElementById('cursorFollower');
+
+if (cursor && cursorFollower) {
+  let followerX = 0, followerY = 0;
+  let cursorX   = 0, cursorY   = 0;
+
+  document.addEventListener('mousemove', (e) => {
+    cursorX = e.clientX;
+    cursorY = e.clientY;
+    cursor.style.left = cursorX + 'px';
+    cursor.style.top  = cursorY + 'px';
+  });
+
+  function animateFollower() {
+    followerX += (cursorX - followerX) * 0.12;
+    followerY += (cursorY - followerY) * 0.12;
+    cursorFollower.style.left = followerX + 'px';
+    cursorFollower.style.top  = followerY + 'px';
+    requestAnimationFrame(animateFollower);
+  }
+  animateFollower();
+
+  const hoverTargets = document.querySelectorAll(
+    'a, button, .galeri-item, .info-card, .medsos-card, .btn-cta, .back-to-top, .music-toggle'
+  );
+  hoverTargets.forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      cursor.classList.add('hover');
+      cursorFollower.classList.add('hover');
+    });
+    el.addEventListener('mouseleave', () => {
+      cursor.classList.remove('hover');
+      cursorFollower.classList.remove('hover');
+    });
+  });
+}
+
+// Tilt Card
+document.querySelectorAll('.info-card').forEach(card => {
+  card.addEventListener('mousemove', (e) => {
+    const rect   = card.getBoundingClientRect();
+    const x      = e.clientX - rect.left;
+    const y      = e.clientY - rect.top;
+    const cx     = rect.width  / 2;
+    const cy     = rect.height / 2;
+    const tiltX  = ((y - cy) / cy) * 10;
+    const tiltY  = ((x - cx) / cx) * -10;
+    card.style.transform = `perspective(600px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(1.03)`;
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'perspective(600px) rotateX(0) rotateY(0) scale(1)';
+  });
+});

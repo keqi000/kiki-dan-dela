@@ -136,7 +136,6 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
-  overflow: hidden;
 }
 
 .home-overlay {
@@ -1184,4 +1183,77 @@ footer {
 @keyframes notifPulse {
   0%, 100% { box-shadow: 0 0 0 0 rgba(201, 149, 108, 0.3); }
   50%       { box-shadow: 0 0 0 6px rgba(201, 149, 108, 0); }
+}
+
+/* Parallax Hero */
+.home {
+  background-attachment: fixed;
+  overflow: visible;
+}
+
+/* Cursor Custom */
+* { cursor: none !important; }
+
+.cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--primary);
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease, color 0.2s ease;
+  user-select: none;
+}
+
+.cursor::after {
+  content: '♥';
+  display: block;
+  filter: drop-shadow(0 0 4px rgba(201, 149, 108, 0.8));
+}
+
+.cursor.hover {
+  transform: translate(-50%, -50%) scale(1.8);
+  color: var(--gold);
+}
+
+.cursor-follower {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid rgba(201, 149, 108, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99998;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+}
+
+.cursor-follower.hover {
+  width: 60px;
+  height: 60px;
+  border-color: rgba(201, 149, 108, 0.8);
+}
+
+/* Hide cursor on mobile/touch */
+@media (hover: none) {
+  * { cursor: auto !important; }
+  .cursor, .cursor-follower { display: none; }
+}
+
+/* Tilt Card */
+.info-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.1s ease, box-shadow 0.3s ease,
+              border-color var(--transition);
+}
+
+.info-card:hover {
+  border-color: rgba(201, 149, 108, 0.35);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
 }
