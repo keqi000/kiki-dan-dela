@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <title>ReDo Family</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Poppins:wght@100;200;300;400;600&display=swap" rel="stylesheet" />
+
+    <!-- Feather Icons CSS fix -->
+    <style>svg { display: inline-block; vertical-align: middle; }</style>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="home.css" />
+  </head>
+
+  <body>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+      <a href="#home" class="navbar-logo">Re<span>Do</span> Family</a>
+      <div class="navbar-nav" id="navbarNav">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">Tentang Kami</a>
+        <a href="#galeri" class="nav-link">Galeri Foto</a>
+        <a href="#contact" class="nav-link">Kontak</a>
+      </div>
+      <div class="navbar-extra">
+        <a href="#" id="menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+
+    <!-- Section Home -->
+    <section class="home" id="home">
+      <div class="home-overlay"></div>
+      <div class="floating-hearts">
+        <span>♥</span><span>♥</span><span>♥</span>
+        <span>♥</span><span>♥</span><span>♥</span>
+      </div>
+      <main class="content">
+        <p class="home-subtitle">Kisah Cinta</p>
+        <h1>Selamat Datang di<br />halaman <span id="typingText"></span></h1>
+        <p class="home-desc">
+          Disini anda dapat menemukan berbagai macam kisah dan kasih diantara kami ♥
+        </p>
+        <a href="#about" class="btn-cta">
+          Lihat Kisah Kami <i data-feather="heart"></i>
+        </a>
+
+        <!-- Love Counter -->
+        <div class="love-counter">
+          <div class="counter-item">
+            <span id="countYears">0</span>
+            <p>Tahun</p>
+          </div>
+          <div class="counter-divider">♥</div>
+          <div class="counter-item">
+            <span id="countMonths">0</span>
+            <p>Bulan</p>
+          </div>
+          <div class="counter-divider">♥</div>
+          <div class="counter-item">
+            <span id="countDays">0</span>
+            <p>Hari</p>
+          </div>
+          <div class="counter-divider">♥</div>
+          <div class="counter-item">
+            <span id="countHours">0</span>
+            <p>Jam</p>
+          </div>
+          <div class="counter-divider">♥</div>
+          <div class="counter-item">
+            <span id="countSeconds">0</span>
+            <p>Detik</p>
+          </div>
+        </div>
+      </main>
+      <div class="scroll-indicator">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- Section About -->
+    <section class="about" id="about">
+      <div class="section-header reveal">
+        <p class="section-tag">Kenali Kami</p>
+        <h2><span>Tentang</span> Kami</h2>
+      </div>
+
+      <div class="row">
+        <!-- Cerita Kami -->
+        <div class="content reveal">
+          <div class="about-img">
+            <img src="../../assets/images/about.jpg" alt="Tentang Kami" />
+            <div class="img-overlay"></div>
+          </div>
+          <div class="text">
+            <h3>Cerita Kami</h3>
+            <div class="timeline-badge">17 Januari 2022</div>
+            <p>
+              Saya bernama Febrian Rezki Hemeto, mempunyai pertemuan dengan
+              seorang wanita bernama Nurdela Putri Otaha. Kami bertemu di SMAN 1
+              Tibawa. Awalnya kami hanya sahabat, tapi lama-lama timbul rasa
+              suka. Kami berkomitmen untuk bersama sejak tanggal 17 Januari 2022
+              pada awal semester 2 kelas 12.
+            </p>
+            <p>
+              Banyak hal yang membuat kami sadar bahwa cinta yang baik adalah
+              cinta yang saling menghargai, memahami, dan mentoleransi pasangan
+              dari segi apapun.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tentang Febrian -->
+        <div class="content reverse reveal">
+          <div class="text">
+            <h3>Tentang <span>Febrian</span></h3>
+            <div class="info-grid">
+              <div class="info-card">
+                <i data-feather="coffee"></i>
+                <h4>Favorit Food & Drink</h4>
+                <ul>
+                  <li>Ayam Goreng Kecap</li>
+                  <li>Mie Kari</li>
+                  <li>Jus Alpukat</li>
+                  <li>Fruit Tea Blackcurrant</li>
+                </ul>
+              </div>
+              <div class="info-card">
+                <i data-feather="star"></i>
+                <h4>Hobby</h4>
+                <ul>
+                  <li>Main Game</li>
+                  <li>Baca Komik</li>
+                  <li>Nonton Miawaug Horror Game</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="about-img profile-img">
+            <img src="../../assets/images/Febrian.jpg" alt="Febrian" />
+            <div class="img-overlay"></div>
+          </div>
+        </div>
+
+        <!-- Tentang Nurdela -->
+        <div class="content reveal">
+          <div class="about-img profile-img">
+            <img src="../../assets/images/Dela.jpg" alt="Nurdela" />
+            <div class="img-overlay"></div>
+          </div>
+          <div class="text">
+            <h3>Tentang <span>Nurdela</span></h3>
+            <div class="info-grid">
+              <div class="info-card">
+                <i data-feather="coffee"></i>
+                <h4>Favorit Food & Drink</h4>
+                <ul>
+                  <li>Bakso</li>
+                  <li>Mie Seblak</li>
+                  <li>Jus Alpukat</li>
+                  <li>Fruit Tea Blackcurrant</li>
+                </ul>
+              </div>
+              <div class="info-card">
+                <i data-feather="star"></i>
+                <h4>Hobby</h4>
+                <ul>
+                  <li>Menggambar</li>
+                  <li>Membaca</li>
+                  <li>Nonton Film Thriller</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Galeri -->
+    <section class="galeri" id="galeri">
+      <div class="section-header reveal">
+        <p class="section-tag">Momen Bersama</p>
+        <h2><span>Galeri</span> Kami</h2>
+      </div>
+
+      <div class="galeri-grid">
+        <div class="galeri-item reveal" data-index="0">
+          <img src="../../assets/images/1.jpg" alt="Idul Adha 2023" />
+          <div class="galeri-overlay">
+            <i data-feather="zoom-in"></i>
+            <h3>Idul Adha 2023</h3>
+          </div>
+        </div>
+        <div class="galeri-item reveal" data-index="1">
+          <img src="../../assets/images/2.jpg" alt="Idul Fitri 2023" />
+          <div class="galeri-overlay">
+            <i data-feather="zoom-in"></i>
+            <h3>Idul Fitri 2023</h3>
+          </div>
+        </div>
+        <div class="galeri-item reveal" data-index="2">
+          <img src="../../assets/images/3.jpg" alt="Malam Tahun Baru 2023" />
+          <div class="galeri-overlay">
+            <i data-feather="zoom-in"></i>
+            <h3>Malam Tahun Baru 2023</h3>
+          </div>
+        </div>
+        <div class="galeri-item reveal" data-index="3">
+          <img src="../../assets/images/4.jpg" alt="Idul Adha 2022" />
+          <div class="galeri-overlay">
+            <i data-feather="zoom-in"></i>
+            <h3>Idul Adha 2022</h3>
+          </div>
+        </div>
+        <div class="galeri-item reveal" data-index="4">
+          <img src="../../assets/images/5.jpg" alt="After Covid" />
+          <div class="galeri-overlay">
+            <i data-feather="zoom-in"></i>
+            <h3>After Covid</h3>
+          </div>
+        </div>
+        <div class="galeri-item reveal" data-index="5">
+          <img src="../../assets/images/6.jpg" alt="After Covid" />
+          <div class="galeri-overlay">
+            <i data-feather="zoom-in"></i>
+            <h3>After Covid</h3>
+          </div>
+        </div>
+        <div class="galeri-item reveal" data-index="6">
+          <img src="../../assets/images/7.jpg" alt="Ultah Aan" />
+          <div class="galeri-overlay">
+            <i data-feather="zoom-in"></i>
+            <h3>Ultah Aan</h3>
+          </div>
+        </div>
+        <div class="galeri-item reveal" data-index="7">
+          <img src="../../assets/images/8.jpg" alt="Cosplay Sugar Daddy" />
+          <div class="galeri-overlay">
+            <i data-feather="zoom-in"></i>
+            <h3>Cosplay Sugar Daddy</h3>
+          </div>
+        </div>
+        <div class="galeri-item reveal" data-index="8">
+          <img src="../../assets/images/9.jpg" alt="Ultah Ayang" />
+          <div class="galeri-overlay">
+            <i data-feather="zoom-in"></i>
+            <h3>Ultah Ayang</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" id="lightboxClose"><i data-feather="x"></i></button>
+      <button class="lightbox-prev" id="lightboxPrev"><i data-feather="chevron-left"></i></button>
+      <button class="lightbox-next" id="lightboxNext"><i data-feather="chevron-right"></i></button>
+      <div class="lightbox-content">
+        <img src="" alt="" id="lightboxImg" />
+        <p id="lightboxCaption"></p>
+      </div>
+    </div>
+
+    <!-- Section Kontak -->
+    <section class="kontak" id="contact">
+      <div class="section-header reveal">
+        <p class="section-tag">Hubungi Kami</p>
+        <h2><span>Kontak</span> Kami</h2>
+        <p class="kontak-desc">Kontak kami yaa, Fb, Ig, Wa ada dibawah :)</p>
+      </div>
+
+      <div class="kontak-wrapper">
+        <div class="kontak-maps reveal">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1256.6321829359247!2d122.85165757555237!3d0.6539196925680569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1696302347873!5m2!1sid!2sid"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d997.3972737246485!2d122.8802611394973!3d0.6141784319362571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1salfamart%20bongomeme!5e0!3m2!1sid!2sid!4v1696303181602!5m2!1sid!2sid"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <div class="kontak-form reveal">
+          <form id="contactForm">
+            <div class="form-group">
+              <i data-feather="user"></i>
+              <input type="text" id="nama" placeholder=" " required />
+              <label for="nama">Nama</label>
+            </div>
+            <div class="form-group">
+              <i data-feather="mail"></i>
+              <input type="email" id="email" placeholder=" " required />
+              <label for="email">Email</label>
+            </div>
+            <div class="form-group">
+              <i data-feather="phone"></i>
+              <input type="text" id="phone" placeholder=" " required />
+              <label for="phone">Nomor HP</label>
+            </div>
+            <button type="submit" class="btn-submit">
+              <span>Kirim Pesan</span>
+              <i data-feather="send"></i>
+            </button>
+          </form>
+        </div>
+
+        <div class="kontak-medsos reveal">
+          <div class="medsos-card">
+            <img src="../../assets/images/Febrian.jpg" alt="Febrian" class="medsos-avatar" />
+            <h3>Media Sosial <span>Febrian</span></h3>
+            <div class="medsos-links">
+              <a href="https://instagram.com/kikihemeto?igshid=NGVhN2U2NjQ0Yg==" class="medsos-btn instagram">
+                <i data-feather="instagram"></i> Instagram
+              </a>
+              <a href="https://www.facebook.com/febrian.rezki.56?mibextid=ZbWKwL" class="medsos-btn facebook">
+                <i data-feather="facebook"></i> Facebook
+              </a>
+              <a href="https://wa.me/qr/DES5QZTQCL3BF1" class="medsos-btn whatsapp">
+                <i data-feather="message-circle"></i> WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <div class="medsos-card">
+            <img src="../../assets/images/Dela.jpg" alt="Nurdela" class="medsos-avatar" />
+            <h3>Media Sosial <span>Nurdela</span></h3>
+            <div class="medsos-links">
+              <a href="https://instagram.com/delaotaha?igshid=YTQwZjQ0NmI0OA==" class="medsos-btn instagram">
+                <i data-feather="instagram"></i> Instagram
+              </a>
+              <a href="https://www.facebook.com/della.otaha?mibextid=ZbWKwL" class="medsos-btn facebook">
+                <i data-feather="facebook"></i> Facebook
+              </a>
+              <a href="https://wa.me/qr/DES5QZTQCL3BF1" class="medsos-btn whatsapp">
+                <i data-feather="message-circle"></i> WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-quote">
+        <i data-feather="heart"></i>
+        <p>"Cinta yang baik adalah cinta yang saling menghargai dan memahami"</p>
+        <i data-feather="heart"></i>
+      </div>
+      <div class="footer-nav">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#galeri">Galeri Foto</a>
+        <a href="#contact">Kontak</a>
+      </div>
+      <div class="footer-credit">
+        <p>Created with <span>♥</span> by <a href="#">Febrian Rezki Hemeto</a> &copy; 2023</p>
+      </div>
+    </footer>
+
+    <!-- Music Player -->
+    <div class="music-player" id="musicPlayer">
+      <button class="music-toggle" id="musicToggle">
+        <i data-feather="music"></i>
+      </button>
+      <div class="music-info" id="musicInfo">
+        <div class="music-disc" id="musicDisc">
+          <i data-feather="music"></i>
+        </div>
+        <div class="music-text">
+          <p class="music-title" id="musicTitle">Risk It All - Bruno Mars</p>
+          <p class="music-artist">Our Song ♥</p>
+        </div>
+        <button class="music-play" id="musicPlay">
+          <i data-feather="play"></i>
+        </button>
+      </div>
+      <!-- Notif autoplay -->
+      <div class="music-notif" id="musicNotif">🎵 Tap untuk putar lagu</div>
+    </div>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+      <i data-feather="chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script>feather.replace();</script>
+    <script src="home.js"></script>
+  </body>
+</html>
