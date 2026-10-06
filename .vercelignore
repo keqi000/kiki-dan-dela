@@ -1,0 +1,11 @@
+/vendor
+/node_modules
+/legacy_backup
+.git
+.github
+tests
+phpunit.xml
+.env
+.env.backup
+.env.production
+

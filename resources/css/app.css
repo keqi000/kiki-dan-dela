@@ -1,3 +1,24 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Poppins', sans-serif;
+
+  --color-primary: #c9956c;
+  --color-primary-dark: #a8714a;
+  --color-gold: #d4af7a;
+  --color-dark-bg: #0a0a0f;
+  --color-dark-card: #12121a;
+  --color-dark-card2: #1a1a26;
+  --color-cream: #f0ece6;
+  --color-muted-text: #9a9090;
+}
+
 :root {
   --primary: #c9956c;
   --primary-dark: #a8714a;
@@ -28,13 +49,13 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: var(--bg);
   color: var(--text);
   overflow-x: hidden;
 }
 
-/* Scroll Progress */
+/* Scroll Progress Bar */
 .scroll-progress {
   position: fixed;
   top: 0;
@@ -61,7 +82,7 @@ body {
 }
 
 .navbar.scrolled {
-  background: rgba(10, 10, 15, 0.85);
+  background: rgba(10, 10, 15, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(201, 149, 108, 0.2);
@@ -69,7 +90,7 @@ body {
 }
 
 .navbar-logo {
-  font-family: "Cormorant Garamond", serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 2.4rem;
   font-weight: 600;
   font-style: italic;
@@ -92,7 +113,7 @@ body {
 }
 
 .navbar-nav a::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -4px;
   left: 0;
@@ -131,11 +152,13 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url("../../assets/images/home.jpg");
+  background-image: url('/assets/images/home.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
+  background-attachment: fixed;
+  overflow: visible;
 }
 
 .home-overlay {
@@ -150,7 +173,7 @@ body {
 }
 
 .home::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -206,7 +229,7 @@ body {
 }
 
 .home .content h1 {
-  font-family: "Cormorant Garamond", serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 5.5rem;
   font-weight: 600;
   color: var(--text);
@@ -253,6 +276,49 @@ body {
   height: 1.6rem;
 }
 
+/* Love Counter */
+.love-counter {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.counter-item {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(201, 149, 108, 0.25);
+  border-radius: 1rem;
+  padding: 1.2rem 1.8rem;
+  backdrop-filter: blur(8px);
+  min-width: 7rem;
+}
+
+.counter-item span {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.counter-item p {
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(240, 236, 230, 0.6);
+  margin-top: 0.4rem;
+}
+
+.counter-divider {
+  font-size: 1.2rem;
+  color: var(--primary);
+  opacity: 0.6;
+}
+
 /* Scroll Indicator */
 .scroll-indicator {
   position: absolute;
@@ -292,7 +358,7 @@ body {
 }
 
 .section-header h2 {
-  font-family: "Cormorant Garamond", serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 4rem;
   font-weight: 600;
   line-height: 1.2;
@@ -377,7 +443,7 @@ body {
 }
 
 .about .text h3 {
-  font-family: "Cormorant Garamond", serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 2.8rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
@@ -422,6 +488,14 @@ body {
   border-radius: 0.8rem;
   padding: 1.6rem;
   border: 1px solid rgba(201, 149, 108, 0.1);
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.1s ease, box-shadow 0.3s ease, border-color var(--transition);
+}
+
+.info-card:hover {
+  border-color: rgba(201, 149, 108, 0.35);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
 }
 
 .info-card svg {
@@ -509,7 +583,7 @@ body {
 }
 
 .galeri-overlay h3 {
-  font-family: "Cormorant Garamond", serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 1.6rem;
   font-weight: 600;
   color: var(--text);
@@ -563,7 +637,7 @@ body {
 }
 
 .lightbox-content p {
-  font-family: "Cormorant Garamond", serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 1.8rem;
   font-style: italic;
   color: var(--gold);
@@ -637,101 +711,6 @@ body {
   filter: grayscale(30%) contrast(1.1);
 }
 
-/* Form */
-.kontak-form {
-  background: var(--bg-card);
-  border-radius: var(--radius);
-  padding: 4rem;
-  border: 1px solid rgba(201, 149, 108, 0.1);
-  max-width: 60rem;
-  margin: auto;
-  width: 100%;
-}
-
-.form-group {
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin-bottom: 2.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  transition: border-color var(--transition);
-}
-
-.form-group:focus-within {
-  border-color: var(--primary);
-}
-
-.form-group svg {
-  width: 1.8rem;
-  height: 1.8rem;
-  color: var(--text-muted);
-  flex-shrink: 0;
-  margin-right: 1.2rem;
-  transition: color var(--transition);
-}
-
-.form-group:focus-within svg {
-  color: var(--primary);
-}
-
-.form-group input {
-  flex: 1;
-  background: none;
-  color: var(--text);
-  font-size: 1.4rem;
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  padding: 1rem 0;
-}
-
-.form-group label {
-  position: absolute;
-  left: 3.2rem;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.3rem;
-  color: var(--text-muted);
-  pointer-events: none;
-  transition: var(--transition);
-}
-
-.form-group input:focus ~ label,
-.form-group input:not(:placeholder-shown) ~ label {
-  top: 0;
-  font-size: 1rem;
-  color: var(--primary);
-}
-
-.btn-submit {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  width: 100%;
-  padding: 1.4rem;
-  background: var(--gradient);
-  color: #fff;
-  font-size: 1.4rem;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  border-radius: 0.8rem;
-  cursor: pointer;
-  transition: var(--transition);
-  box-shadow: 0 4px 20px rgba(201, 149, 108, 0.3);
-  margin-top: 1rem;
-}
-
-.btn-submit:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(201, 149, 108, 0.5);
-}
-
-.btn-submit svg {
-  width: 1.8rem;
-  height: 1.8rem;
-}
-
 /* Medsos Cards */
 .kontak-medsos {
   display: grid;
@@ -766,7 +745,7 @@ body {
 }
 
 .medsos-card h3 {
-  font-family: "Cormorant Garamond", serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 2rem;
@@ -829,7 +808,7 @@ footer {
 }
 
 .footer-quote p {
-  font-family: "Cormorant Garamond", serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 1.6rem;
   font-style: italic;
   color: var(--text-muted);
@@ -914,107 +893,6 @@ footer {
 .back-to-top svg {
   width: 2rem;
   height: 2rem;
-}
-
-/* Media Query Tablet */
-@media (max-width: 900px) {
-  html { font-size: 56.25%; }
-
-  #menu { display: inline-block; }
-
-  .navbar-nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 28rem;
-    height: 100vh;
-    background: rgba(18, 18, 26, 0.97);
-    backdrop-filter: blur(20px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    border-left: 1px solid rgba(201, 149, 108, 0.2);
-  }
-
-  .navbar-nav.active { right: 0; }
-
-  .navbar-nav a { font-size: 1.8rem; margin: 0; }
-
-  .about .row .content,
-  .about .row .content.reverse { flex-direction: column; }
-
-  .about-img { flex: none; width: 100%; aspect-ratio: 16/9; }
-
-  .about .text,
-  .about .row .content.reverse .text { padding: 2.5rem; }
-
-  .info-grid { grid-template-columns: 1fr; }
-
-  .galeri-grid { grid-template-columns: repeat(2, 1fr); }
-
-  .kontak-maps { grid-template-columns: 1fr; }
-
-  .kontak-medsos { grid-template-columns: 1fr; }
-}
-
-/* Media Query Mobile */
-@media (max-width: 500px) {
-  html { font-size: 50%; }
-
-  .home .content h1 { font-size: 4rem; }
-
-  .galeri-grid { grid-template-columns: 1fr; }
-
-  .kontak-form { padding: 2.5rem 2rem; }
-
-  .lightbox-prev { left: 0.5rem; }
-  .lightbox-next { right: 0.5rem; }
-}
-
-/* Love Counter */
-.love-counter {
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-  margin-top: 3rem;
-  flex-wrap: wrap;
-}
-
-.counter-item {
-  text-align: center;
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(201, 149, 108, 0.25);
-  border-radius: 1rem;
-  padding: 1.2rem 1.8rem;
-  backdrop-filter: blur(8px);
-  min-width: 7rem;
-}
-
-.counter-item span {
-  display: block;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 3.2rem;
-  font-weight: 600;
-  color: var(--gold);
-  line-height: 1;
-}
-
-.counter-item p {
-  font-size: 1rem;
-  font-weight: 300;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(240, 236, 230, 0.6);
-  margin-top: 0.4rem;
-}
-
-.counter-divider {
-  font-size: 1.2rem;
-  color: var(--primary);
-  opacity: 0.6;
 }
 
 /* Music Player */
@@ -1147,13 +1025,6 @@ footer {
   height: 1.4rem;
 }
 
-@media (max-width: 500px) {
-  .love-counter { gap: 0.8rem; }
-  .counter-item { padding: 1rem 1.2rem; min-width: 5.5rem; }
-  .counter-item span { font-size: 2.4rem; }
-  .music-player { bottom: 2rem; left: 1.5rem; }
-}
-
 /* Music Notif */
 .music-notif {
   position: absolute;
@@ -1185,75 +1056,62 @@ footer {
   50%       { box-shadow: 0 0 0 6px rgba(201, 149, 108, 0); }
 }
 
-/* Parallax Hero */
-.home {
-  background-attachment: fixed;
-  overflow: visible;
+/* Responsive Breakpoints */
+@media (max-width: 900px) {
+  html { font-size: 56.25%; }
+
+  #menu { display: inline-block; }
+
+  .navbar-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 28rem;
+    height: 100vh;
+    background: rgba(18, 18, 26, 0.97);
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-left: 1px solid rgba(201, 149, 108, 0.2);
+  }
+
+  .navbar-nav.active { right: 0; }
+
+  .navbar-nav a { font-size: 1.8rem; margin: 0; }
+
+  .about .row .content,
+  .about .row .content.reverse { flex-direction: column; }
+
+  .about-img { flex: none; width: 100%; aspect-ratio: 16/9; }
+
+  .about .text,
+  .about .row .content.reverse .text { padding: 2.5rem; }
+
+  .info-grid { grid-template-columns: 1fr; }
+
+  .galeri-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .kontak-maps { grid-template-columns: 1fr; }
+
+  .kontak-medsos { grid-template-columns: 1fr; }
 }
 
-/* Cursor Custom */
-* { cursor: none !important; }
+@media (max-width: 500px) {
+  html { font-size: 50%; }
 
-.cursor {
-  position: fixed;
-  pointer-events: none;
-  z-index: 99999;
-  left: 0;
-  top: 0;
-  font-size: 22px;
-  line-height: 1;
-  color: var(--primary);
-  transform: translate(-50%, -50%);
-  transition: transform 0.1s ease, color 0.2s ease;
-  user-select: none;
-}
+  .home .content h1 { font-size: 4rem; }
 
-.cursor::after {
-  content: '♥';
-  display: block;
-  filter: drop-shadow(0 0 4px rgba(201, 149, 108, 0.8));
-}
+  .galeri-grid { grid-template-columns: 1fr; }
 
-.cursor.hover {
-  transform: translate(-50%, -50%) scale(1.8);
-  color: var(--gold);
-}
+  .lightbox-prev { left: 0.5rem; }
+  .lightbox-next { right: 0.5rem; }
 
-.cursor-follower {
-  position: fixed;
-  width: 40px;
-  height: 40px;
-  border: 1.5px solid rgba(201, 149, 108, 0.5);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 99998;
-  left: 0;
-  top: 0;
-  transform: translate(-50%, -50%);
-  transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
-}
-
-.cursor-follower.hover {
-  width: 60px;
-  height: 60px;
-  border-color: rgba(201, 149, 108, 0.8);
-}
-
-/* Hide cursor on mobile/touch */
-@media (hover: none) {
-  * { cursor: auto !important; }
-  .cursor, .cursor-follower { display: none; }
-}
-
-/* Tilt Card */
-.info-card {
-  transform-style: preserve-3d;
-  will-change: transform;
-  transition: transform 0.1s ease, box-shadow 0.3s ease,
-              border-color var(--transition);
-}
-
-.info-card:hover {
-  border-color: rgba(201, 149, 108, 0.35);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+  .love-counter { gap: 0.8rem; }
+  .counter-item { padding: 1rem 1.2rem; min-width: 5.5rem; }
+  .counter-item span { font-size: 2.4rem; }
+  .music-player { bottom: 2rem; left: 1.5rem; }
 }
