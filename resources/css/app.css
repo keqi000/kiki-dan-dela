@@ -573,8 +573,8 @@ body {
 
 .galeri-item {
   position: relative;
-  flex: 0 0 32rem;
-  height: 22rem;
+  flex: 0 0 22rem;
+  height: 32rem;
   overflow: hidden;
   border-radius: 1.2rem;
   cursor: pointer;
@@ -1201,7 +1201,7 @@ footer {
 
   .info-grid { grid-template-columns: 1fr; }
 
-  .galeri-item { flex: 0 0 26rem; height: 18rem; }
+  .galeri-item { flex: 0 0 20rem; height: 30rem; }
   .galeri-arrow { width: 4rem; height: 4rem; }
   .galeri-arrow-left  { left: 0.8rem; }
   .galeri-arrow-right { right: 0.8rem; }
@@ -1216,7 +1216,7 @@ footer {
 
   .home .content h1 { font-size: 4rem; }
 
-  .galeri-item { flex: 0 0 80vw; height: 56vw; max-height: 22rem; }
+  .galeri-item { flex: 0 0 72vw; height: 108vw; max-height: 38rem; }
   .galeri-arrow { display: none; }
 
   .lightbox-prev { left: 0.5rem; }
