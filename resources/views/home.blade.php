@@ -147,15 +147,31 @@
             <h2><span>Galeri</span> Kami</h2>
         </div>
 
-        <div class="galeri-grid">
-            @foreach ($gallery as $index => $item)
-                <div class="galeri-item reveal" data-index="{{ $index }}">
-                    <img src="{{ $item['img'] }}" alt="{{ $item['title'] }}" loading="lazy" />
-                    <div class="galeri-overlay">
-                        <i data-feather="zoom-in"></i>
-                        <h3>{{ $item['title'] }}</h3>
+        <div class="galeri-carousel-wrapper">
+            <button class="galeri-arrow galeri-arrow-left" id="galeriPrev" aria-label="Sebelumnya">
+                <i data-feather="chevron-left"></i>
+            </button>
+
+            <div class="galeri-track" id="galeriTrack">
+                @foreach ($gallery as $index => $item)
+                    <div class="galeri-item" data-index="{{ $index }}">
+                        <img src="{{ $item['img'] }}" alt="{{ $item['title'] }}" loading="lazy" />
+                        <div class="galeri-overlay">
+                            <i data-feather="zoom-in"></i>
+                            <h3>{{ $item['title'] }}</h3>
+                        </div>
                     </div>
-                </div>
+                @endforeach
+            </div>
+
+            <button class="galeri-arrow galeri-arrow-right" id="galeriNext" aria-label="Selanjutnya">
+                <i data-feather="chevron-right"></i>
+            </button>
+        </div>
+
+        <div class="galeri-dots" id="galeriDots">
+            @foreach ($gallery as $index => $item)
+                <button class="galeri-dot{{ $index === 0 ? ' active' : '' }}" data-index="{{ $index }}" aria-label="Foto {{ $index + 1 }}"></button>
             @endforeach
         </div>
     </section>

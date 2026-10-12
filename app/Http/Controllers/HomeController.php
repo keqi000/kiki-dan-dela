@@ -59,6 +59,23 @@ class HomeController extends Controller
             ['img' => asset('assets/images/7.jpg'), 'title' => 'Ultah Aan'],
             ['img' => asset('assets/images/8.jpg'), 'title' => 'Cosplay Sugar Daddy'],
             ['img' => asset('assets/images/9.jpg'), 'title' => 'Ultah Ayang'],
+            ['img' => asset('assets/images/10.jpg'), 'title' => 'Pohon Kasih Manado'],
+            ['img' => asset('assets/images/11.jpg'), 'title' => 'Ultah Ayang P2'],
+            ['img' => asset('assets/images/12.jpg'), 'title' => 'Pohon Kasih Manado P2'],
+            ['img' => asset('assets/images/13.jpg'), 'title' => 'Bioskop Date'],
+            ['img' => asset('assets/images/14.jpg'), 'title' => 'Richeese Time'],
+            ['img' => asset('assets/images/15.jpg'), 'title' => 'Semhas Kiki'],
+            ['img' => asset('assets/images/16.jpg'), 'title' => 'Sidang Kiki'],
+            ['img' => asset('assets/images/17.jpg'), 'title' => 'Bioskop Date P2'],
+            ['img' => asset('assets/images/18.jpg'), 'title' => 'Memories School'],
+            ['img' => asset('assets/images/19.jpg'), 'title' => 'Pohon Kasih Manado P3'],
+            ['img' => asset('assets/images/20.jpg'), 'title' => 'Wisuda Kiki'],
+            ['img' => asset('assets/images/21.jpg'), 'title' => 'After Wisuda'],
+            ['img' => asset('assets/images/22.jpg'), 'title' => 'Richeese Time P2'],
+            ['img' => asset('assets/images/23.jpg'), 'title' => 'Museum Date'],
+            ['img' => asset('assets/images/24.jpg'), 'title' => 'Pohon Kasih Manado P4'],
+            ['img' => asset('assets/images/25.jpg'), 'title' => 'Pohon Kasih Manado P4'],
+            ['img' => asset('assets/images/26.jpg'), 'title' => 'Pohon Kasih Manado P5'],
         ];
 
         $music = [
