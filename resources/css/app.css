@@ -1216,7 +1216,7 @@ footer {
 
   .home .content h1 { font-size: 4rem; }
 
-  .galeri-item { flex: 0 0 72vw; height: 108vw; max-height: 38rem; }
+  .galeri-item { flex: 0 0 18rem; height: 28rem; }
   .galeri-arrow { display: none; }
 
   .lightbox-prev { left: 0.5rem; }
